@@ -1,0 +1,17 @@
+
+<div class="TodoList">
+  <header>
+    <TodoInput @addTodo="addTodo"
+      @sortItem="sortItem"
+    />
+  </header>
+  <ul>
+    <TodoItem
+      v-for="(todo,idx) in todos" 
+      :key="idx"
+      :todoData="todo"
+      @click.native="delTodo(todo.id)"
+    />
+      
+  </ul>
+</div>
